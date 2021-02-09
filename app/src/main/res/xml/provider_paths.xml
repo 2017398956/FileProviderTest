@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        name="myDownload"
+        path="/Download/apks" />
+
+    <external-files-path
+        name="download"
+        path="/Download/apks"/>
+</paths>
