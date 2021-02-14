@@ -4,13 +4,13 @@
     package="com.example.fileprovidertest">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<!--    <uses-permission android:name="android.permission.INSTALL_PACKAGES"-->
-<!--        tools:ignore="ProtectedPermissions" />-->
-<!--    <uses-permission-->
-<!--        android:name="android.permission.INSTALL_LOCATION_PROVIDER"-->
-<!--        tools:ignore="ProtectedPermissions" />-->
-<!--    android.permission.REQUEST_INSTALL_PACKAGES-->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.INSTALL_LOCATION_PROVIDER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
