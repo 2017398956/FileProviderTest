@@ -11,21 +11,32 @@ import android.os.StrictMode
 import android.os.StrictMode.VmPolicy
 import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import com.example.fileprovidertest.databinding.ActivityMainBinding
 import personal.nfl.permission.annotation.GetPermissions4AndroidX
 import personal.nfl.permission.support.util.AbcPermission
 import java.io.File
 
 class MainActivity : AppCompatActivity() {
+
+    private var useViewBinding = true
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // 建议在 application 添加
         AbcPermission.install(this)
-        setContentView(R.layout.activity_main)
-
+        if (useViewBinding){
+            binding = ActivityMainBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+            binding.btnViewBindingTest.setOnClickListener {
+                Toast.makeText(this , "测试 ViewBinding" , Toast.LENGTH_SHORT).show()
+            }
+        }else{
+            setContentView(R.layout.activity_main)
+        }
+        // 开启严格模式
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             val builder = VmPolicy.Builder()
             builder.penaltyDeath()

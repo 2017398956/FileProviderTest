@@ -10,11 +10,21 @@
         android:id="@+id/btn_install_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="安装测试"
         android:onClick="onClick"
+        android:text="安装测试"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_view_binding_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="测试 ViewBinding"
+        app:layout_constraintTop_toBottomOf="@id/btn_install_app" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
